@@ -28,3 +28,23 @@ void input() {
 
 	}
 }
+void BubbleShortArray() {             // prosedur untuk mengurutkan array dengan metode bubble sort
+	int pass = 1;                     // step 1
+
+	do {
+		for (int j = 0; j <= n - 1 - pass; j++) {          //step 2
+			if (array[j] > array[j + 1]) {                 //step 3
+				int temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
+			}
+		}
+		pass = pass + 1;                                   //step 4
+
+		cout << "\nPass " << pass - 1 << "; ";             //output ke layar
+		for (int k = 0; k < n; k++) {
+			cout << array[k] << " ";
+		}
+		cout << endl;
+	} while (pass <= n - 1);                               //step 5
+}
